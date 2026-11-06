@@ -1,0 +1,4 @@
+interface:
+  display_name: "插画知识视频"
+  short_description: "用完整插画定帧演绎铺垫，以简洁二维信息图、动效和音效讲清知识，交付可编辑视频"
+  default_prompt: "使用 $illustrated-knowledge-video 根据我提供的文案或配音，沿用已确认角色，用 A-roll 完整插画定帧切换演绎场景，用 B-roll 简洁二维信息图讲解知识，结合 video-shotcraft 动效与 sound 音效，以 Remotion 完成可编辑工程和所需成片。"
