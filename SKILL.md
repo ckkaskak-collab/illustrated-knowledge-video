@@ -28,12 +28,14 @@ description: "将定稿文案或已有配音制作成插画知识视频：A-roll
 
 先明确这段文案的作用、观众要看懂什么及主体怎样变化，再选素材和模板。A-roll 检查动作与结果是否成立，B-roll 检查知识关系是否被画面解释出来；换姿势、逐项入场和配色通过只是局部检查。按语义选择 A/B，不设固定比例或轮换顺序。参考图用于校准分工，角色与配色沿用当前默认；更换画风以用户的明确选择为准。
 
+B-roll 分镜与质量修订先读 [段落设计与具体范例](references/broll-sequence-design.md)：先组织连续讲解中的问题、案例与可见证据，再落到单镜。把设计写进已有九列表与素材清单，不增加逐段审批。给定文案和配音时在原内容内设计；缺少必要论据或案例时明确缺项，不为套参考片结构擅自改稿。
+
 使用当前彩色角色组时，A-roll 按 [三人组场景设计](references/aroll-cast-design.md)组织橙衣主角、紫衣女生与蓝衣男生的意图、行动和反应；按本段需要选人，小猫作为可选搭档。造型绑定与人物搭戏分别检查，避免只把立绘放进画面。
 
 ## 已确定的默认风格
 
 - A-roll：默认白底、黑线留白，项目已确认的角色与画风优先。用必要数量的独立完整图片表现处境、行动与结果，每张定帧停留，直接切换下一张。详见 [A-roll 接口](references/aroll-ian.md)。
-- B-roll：采用 baoyu-infographic 方法组织简洁二维信息图；近白底、轻线条、清楚的文字层级与充分留白，强调色集中于当前重点。制作前查看 [规范和确认图](references/broll-visual-style.md)，再用 video-shotcraft 适配动效、sound 选取音效。
+- B-roll：采用 baoyu-infographic 方法组织讲解层；近白底、轻线条、清楚的文字层级与充分留白，强调色集中于当前重点。真实素材、成品演示、局部细节与图形解释按内容组合，保留主体必要的颜色、质感和可辨细节。制作前查看 [规范和确认图](references/broll-visual-style.md)，再用 video-shotcraft 适配动效、sound 选取音效。
 - 当前 B-roll 信息图版不自动添加讲解头像；用户要求或旧工程明确保留时，读取[圆形讲解头像](references/broll-narrator.md)。A-roll 不显示。
 - 平台识别优先用真实品牌标识；多服务连线分行、分落点；股价变化用逐步绘制的折线表达。素材来源、数据与示意边界见[视觉规范](references/broll-visual-style.md)。
 - 布局修订沿用已确认的信息图风格：箭头尖端分开、目标文字对齐箭头、同组短句紧凑排列；画面默认不显示素材来源或制作说明。具体规则见视觉规范，出处保存在本地清单。
@@ -58,9 +60,9 @@ A-roll 的“动态变化”填写图片状态变化、切图锚点与停留，�
 | 阶段 | 读取 | 执行与交付 |
 |---|---|---|
 | 配音与对齐 | [X 01](references/original-prompts/x/01-voice-alignment.txt)、[时间和配音](references/timing-and-handoff.md)、[本地脚本](references/local-tools.md) | 整段合成或保留音频；保存原始 ASR、按定稿核对的短语表和连续编排表 |
-| 视觉编排 | [叙事与动作设计](references/visual-storytelling.md)、[飞书编排 2.0](references/original-prompts/feishu/visual-storyboard-v2.txt) | 九列表中写明本镜作用、动作前后状态和承接对象；镜头结束节拍点、逗号数值、所缺素材；内部变化绑定真实短语/词锚点 |
+| 视觉编排 | [叙事与动作设计](references/visual-storytelling.md)、[飞书编排 2.0](references/original-prompts/feishu/visual-storyboard-v2.txt) | 先确定段落问题、贯穿案例与可见证据；九列表中写明本镜作用、动作前后状态和承接对象；镜头结束节拍点、逗号数值、所缺素材；内部变化绑定真实短语/词锚点 |
 | A-roll | [角色动作接口](references/aroll-ian.md)；彩色组同时读取 [三人组场景设计](references/aroll-cast-design.md) | 先选角并设计人物互动，再独立生成完整定帧图；保持身份、站位、视线与道具连续，核对行动、反应和结果 |
-| B-roll | [视觉规范](references/broll-visual-style.md)、[可编辑实现](references/broll-editable.md)、[X 06](references/original-prompts/x/06-broll-motion.txt) | 先设计对象联动和知识关系，再按口播推进；按信息图规范组织可编辑对象，Shotcraft 适配运动；核对过程及整组出现；需要头像时另读其规范 |
+| B-roll | [段落设计与范例](references/broll-sequence-design.md)、[视觉规范](references/broll-visual-style.md)、[可编辑实现](references/broll-editable.md)、[X 06](references/original-prompts/x/06-broll-motion.txt) | 准备能支撑局部、变化与比较的素材；先完成代表性连续讲解段，核对解释证据与衔接，再扩展适用做法；按口播推进可编辑对象与整组出现；需要头像时另读其规范 |
 | 整片剪辑 | 默认 [Remotion 工作流](references/remotion-workflow.md)；仅明确使用 ChatCut 时读取 [ChatCut 接口](references/chatcut-workflow.md) 和 [飞书剪辑 2.0](references/original-prompts/feishu/chatcut-editing-v2.txt) | 按选定引擎完成可编辑时间轴及两份制作清单；默认交付 Remotion 源工程 |
 | 字幕与交付检查 | [字幕与成片](references/captions-and-delivery.md) | 核对最终 Card、渲染画面和 SRT；保存源码与实例参数；分别报告抽帧、播放、听审、导出 |
 | 配乐与音效 | [声音后期](references/audio-postproduction.md) | 音效使用 sound 搜索 Freesound，配乐沿用项目选择；记录来源、混音和实际听审状态 |
